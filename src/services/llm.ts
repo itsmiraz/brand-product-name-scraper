@@ -7,7 +7,7 @@ import axios from "axios";
 export async function normalizeProducts(raw: string[]): Promise<string[]> {
   const prompt = `
 You are a product name cleaner.
-Task: From the following list of product titles, extract only the *generic product type* (remove brand names, marketing fluff, sizes, emojis, "","show all","blank" etc).
+Task: From the following list of product titles, extract only the *generic product type* (remove brand names, starter kit , set ,marketing fluff, sizes, emojis, "","show all","blank" etc).
 Return a JSON array of strings.
 
 Input: ${JSON.stringify(raw.slice(0, 30))}  // cap list
